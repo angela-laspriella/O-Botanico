@@ -94,6 +94,7 @@ export const SidebarMenu = styled.li`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-bottom: 80px;
 
   color: red;
 
@@ -102,15 +103,24 @@ export const SidebarMenu = styled.li`
   }
 `;
 
-export const SidebarLink = styled(LinkS)`
+export const SidebarLink = styled.a`
   font-size: 625%;
   font-weight: bold;
+
+  text-decoration: none;
+  text-decoration-line: none;
 
   color: #161a15;
   cursor: pointer;
   transition: 0.2s ease-in-out;
 
   counter-increment: li;
+
+  a:visited {
+    text-decoration: none;
+    text-decoration-line: none;
+    color: #161a15;
+  }
 
   &::before {
     content: "0" counter(li) ".";
@@ -127,6 +137,7 @@ export const SidebarLink = styled(LinkS)`
     color: #f46036;
     transition: 0.2s ease-in-out;
     list-style: none;
+    text-decoration: none;
 
     &::before {
       vertical-align: baseline;
