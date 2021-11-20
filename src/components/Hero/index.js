@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import {
   HeroContainer,
   HeroContent,
-  StartWrap,
-  ScrollM,
   HeroH1,
   TitleWrap,
   HeroH3,
@@ -22,13 +20,6 @@ const HeroSection = () => {
   return (
     <HeroContainer id="hero">
       <HeroContent>
-        <StartWrap>
-          <Parallax y={[-155, 150]}>
-            <img src={ring} />
-          </Parallax>
-          <img src={ring} />
-        </StartWrap>
-        <ScrollM>Scroll</ScrollM>
         <TitleWrap>
           <Parallax x={[0, 100]} tagOuter="figure">
             <HeroH3>O -</HeroH3>

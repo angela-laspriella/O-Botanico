@@ -25,34 +25,6 @@ export const HeroContent = styled.div`
   width: 100%;
 `;
 
-export const StartWrap = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-
-  img:first-child {
-    width: 180px;
-    position: relative;
-  }
-
-  svg {
-    fill: red;
-  }
-
-  img:nth-child(2) {
-    width: 300px;
-    position: absolute;
-  }
-`;
-
-export const ScrollM = styled.div`
-  color: white;
-  margin-top: 105px;
-  font-size: 110%;
-`;
-
 export const TitleWrap = styled.div`
   width: 100%;
   max-width: 1200px;
