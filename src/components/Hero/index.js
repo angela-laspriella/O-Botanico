@@ -23,7 +23,7 @@ const HeroSection = () => {
         <TitleWrap>
           <Parallax x={[0, 100]} tagOuter="figure">
             <HeroH3>O -</HeroH3>
-            <HeroH1>Jardim</HeroH1>
+            <HeroH1>Jardim1</HeroH1>
             <HeroH1>Botânico</HeroH1>
           </Parallax>
         </TitleWrap>
