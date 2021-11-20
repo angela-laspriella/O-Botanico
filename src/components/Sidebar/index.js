@@ -10,6 +10,8 @@ import {
   SidebarLink,
 } from "./SidebarElements";
 
+import { Link } from "react-router-dom";
+
 import { NavLinks } from "../../data/data.js";
 
 const Sidebar = ({ isOpen, toggle }) => {
@@ -27,8 +29,10 @@ const Sidebar = ({ isOpen, toggle }) => {
           {NavLinks.map((item, index) => {
             return (
               <>
-                <SidebarLink to={item.tag} onClick={toggle}>
-                  {item.name}
+                <SidebarLink>
+                  <Link to={item.path} onClick={toggle}>
+                    {item.name}
+                  </Link>
                 </SidebarLink>
               </>
             );
