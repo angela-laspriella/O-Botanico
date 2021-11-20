@@ -79,15 +79,16 @@ export const Icon = styled.div`
 
 export const SidebarWrapper = styled.div`
   width: 100%;
+  max-width: 1200px;
 
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 
   margin: auto;
 `;
 
 export const SidebarMenu = styled.li`
-  width: 80%;
+  width: fit-content;
   height: 500px;
   max-width: 1200px;
 
@@ -97,10 +98,6 @@ export const SidebarMenu = styled.li`
   margin-bottom: 40px;
 
   color: red;
-
-  &::before {
-    color: red;
-  }
 `;
 
 export const SidebarLink = styled.a`
@@ -122,13 +119,13 @@ export const SidebarLink = styled.a`
     color: #161a15;
   }
 
-  &:visited {
+  a:visited {
     text-decoration: none;
     text-decoration-line: none;
     color: #161a15;
   }
 
-  &::before {
+  a:before {
     content: "0" counter(li) ".";
     margin-right: 16px;
     vertical-align: text-top;
@@ -144,15 +141,8 @@ export const SidebarLink = styled.a`
     transition: 0.2s ease-in-out;
     list-style: none;
     text-decoration: none;
-  }
 
-  &:hover {
-    color: #f46036;
-    transition: 0.2s ease-in-out;
-    list-style: none;
-    text-decoration: none;
-
-    &::before {
+    &:before {
       vertical-align: baseline;
       color: transparent;
       content: "---";
