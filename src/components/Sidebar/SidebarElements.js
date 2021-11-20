@@ -88,13 +88,13 @@ export const SidebarWrapper = styled.div`
 
 export const SidebarMenu = styled.li`
   width: 80%;
-  height: 450px;
+  height: 500px;
   max-width: 1200px;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 
   color: red;
 
@@ -116,7 +116,13 @@ export const SidebarLink = styled.a`
 
   counter-increment: li;
 
-  a:visited {
+  a {
+    text-decoration: none;
+    text-decoration-line: none;
+    color: #161a15;
+  }
+
+  &:visited {
     text-decoration: none;
     text-decoration-line: none;
     color: #161a15;
@@ -131,6 +137,13 @@ export const SidebarLink = styled.a`
 
     font-style: normal;
     font-size: 36px;
+  }
+
+  a:hover {
+    color: #f46036;
+    transition: 0.2s ease-in-out;
+    list-style: none;
+    text-decoration: none;
   }
 
   &:hover {
