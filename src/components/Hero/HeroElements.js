@@ -131,7 +131,7 @@ export const UCContent = styled.div`
 `;
 
 export const UCTitle = styled.h3`
-  width: 300px;
+  width: 350px;
   font-family: "Playfair Display", serif;
 
   font-style: normal;
