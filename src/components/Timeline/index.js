@@ -9,12 +9,19 @@ import {
   UCTitle,
   UCText,
   ScrollHorizontal,
+  TimelineWrap,
+  ImageWrap,
+  TextWrap,
+  Horizontal,
+  Text,
+  Subtext,
+  InfoWrap,
+  LineWrap,
+  Line,
 } from "./TimelineElements";
 
 import { UCInfo } from "../../data/data.js";
-
-import { Parallax } from "react-scroll-parallax";
-import ImageHero from "../../images/Hero_image.png";
+import { TimelineInfo } from "../../data/data.js";
 
 const TimelineSection = () => {
   const [hover, setHover] = useState(false);
@@ -27,24 +34,45 @@ const TimelineSection = () => {
     <TimelineContainer id="timeline">
       <TimelineContent>
         <Controller>
-          <Scene triggerHook="onLeave" duration={6000} pin>
+          <Scene triggerHook="onLeave" duration={8000} pin>
             {(progress) => (
               <ScrollHorizontal>
                 <Timeline totalProgress={progress} paused>
                   <Tween from={{ x: "0%" }} to={{ x: "-50%" }}>
-                    <UCWrap>
-                      <UCContent>
-                        {UCInfo.map((item, index) => {
-                          return (
-                            <>
-                              <UCTitle>{item.title}</UCTitle>
-                              <UCText>{item.text01}</UCText>
-                              <UCText>{item.text02}</UCText>
-                            </>
-                          );
-                        })}
-                      </UCContent>
-                    </UCWrap>
+                    <Horizontal>
+                      <UCWrap>
+                        <UCContent>
+                          {UCInfo.map((item, index) => {
+                            return (
+                              <>
+                                <UCTitle>{item.title}</UCTitle>
+                                <UCText>{item.text01}</UCText>
+                                <UCText>{item.text02}</UCText>
+                              </>
+                            );
+                          })}
+                        </UCContent>
+                      </UCWrap>
+
+                      <TimelineWrap>
+                        <InfoWrap>
+                          {TimelineInfo.map((item, index) => {
+                            return (
+                              <>
+                                <ImageWrap>
+                                  <img src={item.img} />
+                                </ImageWrap>
+                                <TextWrap>
+                                  <Text> {item.text1}</Text>
+                                  <Subtext>{item.subtext} </Subtext>
+                                </TextWrap>
+                              </>
+                            );
+                          })}
+                        </InfoWrap>
+                        <Line />
+                      </TimelineWrap>
+                    </Horizontal>
                   </Tween>
                 </Timeline>
               </ScrollHorizontal>

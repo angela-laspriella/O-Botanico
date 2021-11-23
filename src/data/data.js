@@ -30,7 +30,7 @@ export const UCInfo = [
   },
 ];
 
-export const Timeline = [
+export const TimelineInfo = [
   {
     img: timeline1,
     text1:
