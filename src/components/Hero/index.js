@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Controller, Scene } from "react-scrollmagic";
-import { Tween, Timeline } from "react-gsap";
+
 import {
   HeroContainer,
   HeroContent,
@@ -13,14 +12,7 @@ import {
   ArrowP,
   ArrowSymbol,
   ImageWrap,
-  UCWrap,
-  UCContent,
-  UCTitle,
-  UCText,
-  ScrollHorizontal,
 } from "./HeroElements";
-
-import { UCInfo } from "../../data/data.js";
 
 import { Parallax } from "react-scroll-parallax";
 import ImageHero from "../../images/Hero_image.png";
@@ -51,32 +43,6 @@ const HeroSection = () => {
             <ImageWrap src={ImageHero} />
           </ScrollImage>
         </ScrollWrap>
-
-        <Controller>
-          <Scene triggerHook="onLeave" duration={6000} pin>
-            {(progress) => (
-              <ScrollHorizontal>
-                <Timeline totalProgress={progress} paused>
-                  <Tween from={{ x: "0%" }} to={{ x: "-50%" }}>
-                    <UCWrap>
-                      <UCContent>
-                        {UCInfo.map((item, index) => {
-                          return (
-                            <>
-                              <UCTitle>{item.title}</UCTitle>
-                              <UCText>{item.text01}</UCText>
-                              <UCText>{item.text02}</UCText>
-                            </>
-                          );
-                        })}
-                      </UCContent>
-                    </UCWrap>
-                  </Tween>
-                </Timeline>
-              </ScrollHorizontal>
-            )}
-          </Scene>
-        </Controller>
       </HeroContent>
     </HeroContainer>
   );
