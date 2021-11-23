@@ -8,6 +8,7 @@ export const HeroContainer = styled.div`
   align-items: center;
 
   overflow: hidden;
+  margin-bottom: 100px;
 `;
 
 export const HeroContent = styled.div`

@@ -3,6 +3,7 @@ import HeroSection from "../components/Hero";
 
 import { ParallaxProvider } from "react-scroll-parallax";
 import TimelineSection from "../components/Timeline";
+import StartSection from "../components/Start";
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
       <ParallaxProvider>
         <HeroSection />
         <TimelineSection />
+        <StartSection />
       </ParallaxProvider>
     </>
   );

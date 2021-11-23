@@ -10,8 +10,6 @@ export const TimelineContainer = styled.div`
   align-items: center;
 
   overflow: hidden;
-
-  padding-bottom: 200px;
 `;
 
 export const TimelineContent = styled.div`
@@ -88,7 +86,6 @@ export const ScrollHorizontal = styled.div`
   height: 100vh;
   width: 100vw;
 
-  margin-bottom: 400px;
   padding-left: 92px;
 `;
 
