@@ -6,7 +6,7 @@ export const ArticlesContainer = styled.div`
   background: #fdfae3;
   height: 100vh;
   align-items: center;
-  /* margin-top: -80px; */
+  margin-top: -80px;
   justify-content: center;
 `;
 
