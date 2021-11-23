@@ -15,6 +15,8 @@ function Home() {
         <TimelineSection />
         <StartSection />
         <WalkSection />
+        <WalkSection />
+        <WalkSection />
       </ParallaxProvider>
     </>
   );

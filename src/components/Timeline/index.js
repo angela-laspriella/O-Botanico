@@ -34,7 +34,7 @@ const TimelineSection = () => {
     <TimelineContainer id="timeline">
       <TimelineContent>
         <Controller>
-          <Scene triggerHook="onLeave" duration={8000} pin>
+          <Scene triggerHook="onLeave" duration={5000} pin>
             {(progress) => (
               <ScrollHorizontal>
                 <Timeline totalProgress={progress} paused>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-scroll";
 
 import {
   HeroContainer,
@@ -19,14 +20,23 @@ const WalkSection = () => {
   };
 
   return (
-    <HeroContainer id="hero">
-      <HeroContent>
-        <TitleWrap>
-          <HeroH1>Recanto</HeroH1>
-          <HeroH1>Tropical</HeroH1>
-        </TitleWrap>
-      </HeroContent>
-    </HeroContainer>
+    <Link
+      activeClass="active"
+      to="walk"
+      spy={true}
+      smooth={true}
+      offset={-100}
+      duration={500}
+    >
+      <HeroContainer id="walk">
+        <HeroContent>
+          <TitleWrap>
+            <HeroH1>Recanto</HeroH1>
+            <HeroH1>Tropical</HeroH1>
+          </TitleWrap>
+        </HeroContent>
+      </HeroContainer>
+    </Link>
   );
 };
 
