@@ -13,17 +13,12 @@ import { Parallax } from "react-scroll-parallax";
 const StartSection = () => {
   return (
     <>
-      <Parallax y={[0, -100]}>
-        <PinkContainer />
-      </Parallax>
-      <Parallax y={[0, -50]}>
-        <StartContainer id="start">
-          <TitleWrap>
-            <StartH1>Começar a explorar</StartH1>
-            <ArrowDown />
-          </TitleWrap>
-        </StartContainer>
-      </Parallax>
+      <StartContainer id="start">
+        <TitleWrap>
+          <StartH1>Começar a explorar</StartH1>
+          <ArrowDown />
+        </TitleWrap>
+      </StartContainer>
     </>
   );
 };
