@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import {
   HeroContainer,
   HeroContent,
@@ -11,10 +12,6 @@ import {
   ArrowP,
   ArrowSymbol,
   ImageWrap,
-  UCWrap,
-  UCContent,
-  UCTitle,
-  UCText,
 } from "./HeroElements";
 
 import { Parallax } from "react-scroll-parallax";
@@ -46,27 +43,6 @@ const HeroSection = () => {
             <ImageWrap src={ImageHero} />
           </ScrollImage>
         </ScrollWrap>
-        <UCWrap>
-          <UCContent>
-            <Parallax x={[-70, 80]} tagOuter="figure">
-              <UCTitle>- Da Faculdade de Coimbra</UCTitle>
-              <UCText>
-                O Jardim Botânico da Universidade de Coimbra (JBUC), fundado em
-                1772, é uma Unidade de Extensão Cultural e de Apoio à Formação
-                desta instituição de ensino superior e tem como missões a
-                investigação, a conservação da biodiversidade, a educação e
-                divulgação de ciência, com especial enfoque na sensibilização
-                para o conhecimento e importância da diversidade vegetal, das
-                alterações climáticas e da utilização sustentável de recursos.
-              </UCText>
-              <UCText>
-                As coleções de plantas que preenchem cada espaço transportam-nos
-                para diferentes latitudes e regiões do mundo, transformando o
-                Jardim num verdadeiro museu vivo.
-              </UCText>
-            </Parallax>
-          </UCContent>
-        </UCWrap>
       </HeroContent>
     </HeroContainer>
   );
