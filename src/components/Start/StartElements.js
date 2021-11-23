@@ -10,7 +10,7 @@ export const StartContainer = styled.div`
   overflow: hidden;
 
   width: 100vw;
-  height: 100vh;
+  height: 50vh;
 `;
 
 export const PinkContainer = styled.div`

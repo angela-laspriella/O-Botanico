@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-scroll";
 
 import {
   StartContainer,
@@ -13,17 +14,21 @@ import { Parallax } from "react-scroll-parallax";
 const StartSection = () => {
   return (
     <>
-      <Parallax y={[0, -100]}>
-        <PinkContainer />
-      </Parallax>
-      <Parallax y={[0, -50]}>
+      <Link
+        activeClass="active"
+        to="start"
+        spy={true}
+        smooth={true}
+        offset={-100}
+        duration={500}
+      >
         <StartContainer id="start">
           <TitleWrap>
             <StartH1>Começar a explorar</StartH1>
             <ArrowDown />
           </TitleWrap>
         </StartContainer>
-      </Parallax>
+      </Link>
     </>
   );
 };
