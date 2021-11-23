@@ -5,7 +5,9 @@ import { ParallaxProvider } from "react-scroll-parallax";
 function Contacts() {
   return (
     <>
-      <ContactSection></ContactSection>
+      <ParallaxProvider>
+        <ContactSection></ContactSection>
+      </ParallaxProvider>
     </>
   );
 }

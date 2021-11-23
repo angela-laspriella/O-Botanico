@@ -26,7 +26,6 @@ export const ContactContainer = styled.div`
   width: 100%;
   height: 80vh;
   // outline: 1px solid blue;
-  padding: 0;
   // background-color: red;
   // Add before styles
 `;
@@ -59,6 +58,7 @@ export const ContactH1 = styled.h1`
   color: #e36944;
   font-weight: 800;
   font-size: 800%;
+
   //outline: 1px solid blue;
 `;
 export const ContactH2 = styled.h2`
@@ -66,6 +66,7 @@ export const ContactH2 = styled.h2`
   color: #282f26;
   font-weight: 800;
   font-size: 400%;
+  z-index: 0;
   //outline: 1px solid blue;
 `;
 export const ContactH3 = styled.h3`
