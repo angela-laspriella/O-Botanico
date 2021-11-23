@@ -109,25 +109,26 @@ export const ImageWrap = styled.img`
 `;
 
 export const UCWrap = styled.div`
-  max-width: 1200px;
-  padding-top: 200px;
+  max-width: 600px;
 
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
 
-  width: 100%;
+  width: 50%;
+
+  display: inline-block;
+  background-color: green;
 `;
 
 export const UCContent = styled.div`
-  width: 40%;
   height: fit-content;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 `;
 
 export const UCTitle = styled.h3`
@@ -157,4 +158,19 @@ export const UCText = styled.p`
   &:last-child {
     margin-top: 16px;
   }
+`;
+
+export const ScrollHorizontal = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  height: 100vh;
+  width: 100vw;
+
+  margin-bottom: 400px;
+  padding-left: 80px;
+
+  background-color: red;
 `;

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Controller, Scene } from "react-scrollmagic";
+import { Tween, Timeline } from "react-gsap";
 import {
   HeroContainer,
   HeroContent,
@@ -15,7 +17,10 @@ import {
   UCContent,
   UCTitle,
   UCText,
+  ScrollHorizontal,
 } from "./HeroElements";
+
+import { UCInfo } from "../../data/data.js";
 
 import { Parallax } from "react-scroll-parallax";
 import ImageHero from "../../images/Hero_image.png";
@@ -46,27 +51,32 @@ const HeroSection = () => {
             <ImageWrap src={ImageHero} />
           </ScrollImage>
         </ScrollWrap>
-        <UCWrap>
-          <UCContent>
-            <Parallax x={[-70, 80]} tagOuter="figure">
-              <UCTitle>- Da Faculdade de Coimbra</UCTitle>
-              <UCText>
-                O Jardim Botânico da Universidade de Coimbra (JBUC), fundado em
-                1772, é uma Unidade de Extensão Cultural e de Apoio à Formação
-                desta instituição de ensino superior e tem como missões a
-                investigação, a conservação da biodiversidade, a educação e
-                divulgação de ciência, com especial enfoque na sensibilização
-                para o conhecimento e importância da diversidade vegetal, das
-                alterações climáticas e da utilização sustentável de recursos.
-              </UCText>
-              <UCText>
-                As coleções de plantas que preenchem cada espaço transportam-nos
-                para diferentes latitudes e regiões do mundo, transformando o
-                Jardim num verdadeiro museu vivo.
-              </UCText>
-            </Parallax>
-          </UCContent>
-        </UCWrap>
+
+        <Controller>
+          <Scene triggerHook="onLeave" duration={6000} pin>
+            {(progress) => (
+              <ScrollHorizontal>
+                <Timeline totalProgress={progress} paused>
+                  <Tween from={{ x: "0%" }} to={{ x: "-50%" }}>
+                    <UCWrap>
+                      <UCContent>
+                        {UCInfo.map((item, index) => {
+                          return (
+                            <>
+                              <UCTitle>{item.title}</UCTitle>
+                              <UCText>{item.text01}</UCText>
+                              <UCText>{item.text02}</UCText>
+                            </>
+                          );
+                        })}
+                      </UCContent>
+                    </UCWrap>
+                  </Tween>
+                </Timeline>
+              </ScrollHorizontal>
+            )}
+          </Scene>
+        </Controller>
       </HeroContent>
     </HeroContainer>
   );
