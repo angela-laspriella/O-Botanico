@@ -4,16 +4,13 @@ import { ReactComponent as ArrowDownR } from "../../images/ArrowDown.svg";
 export const StartContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 
   overflow: hidden;
 
   width: 100vw;
   height: 100vh;
-  background-color: #161a15;
-
-  padding-top: 200px;
 `;
 
 export const PinkContainer = styled.div`
@@ -27,7 +24,6 @@ export const PinkContainer = styled.div`
 export const TitleWrap = styled.div`
   width: 100%;
   max-width: 1200px;
-  margin-top: -5%;
 
   display: flex;
   flex-direction: column;
