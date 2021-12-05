@@ -38,10 +38,10 @@ const WalkSection = () => {
                   <HeroH1>{item.title}</HeroH1>
                 </TitleWrap>
                 <InfoWrap>
-                  <Text>{item.text1}</Text>
                   <InfoImg>
                     <img src={item.img} />
                   </InfoImg>
+                  <Text>{item.text1}</Text>
                 </InfoWrap>
               </>
             );

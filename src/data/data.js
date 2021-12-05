@@ -1,5 +1,7 @@
 import timeline1 from "../images/scrollH/timeline_one.png";
 import timeline2 from "../images/scrollH/timeline_two.png";
+import timeline3 from "../images/scrollH/timeline_three.png";
+import timeline4 from "../images/scrollH/timeline_four.png";
 
 import walkImg1 from "../images/walk/walk1.png";
 import walkImg2 from "../images/walk/walk2.png";
@@ -44,6 +46,19 @@ export const TimelineInfo = [
     img: timeline2,
     text1:
       "Os jardins botânicos surgem na Europa como consequência da expansão europeia do século XV. O contacto com plantas e animais exóticos despertou o interesse pelo seu estudo. Exemplo disso foi o português Garcia da Orta que no séc.XVI viajou para a Índia e se dedicou ao estudo das propriedades terapêuticas das plantas, publicando dois importantes ensaios.",
+    subtext: "Some cool photo, some cool place. Place 1985",
+  },
+
+  {
+    img: timeline3,
+    text1:
+      "O século XVIII é marcado por uma revolução de mentalidades e por grandes avanços na ciência, nomeadamente no campo da Medicina. Assim, o Jardim Botânico de Coimbra foi criado com o objetivo de complementar o estudo da História Natural e da Medicina.",
+    subtext: "Some cool photo, some cool place. Place 1985",
+  },
+  {
+    img: timeline4,
+    text1:
+      "Tendo tido como primeiro responsável Domingos Vandelli destaca-se, a partir de 1791, o papel desempenhado pelo naturalista e botânico Avelar Brotero com várias publicações científicas, entre as quais a primeira Flora Lusitana (1804). Este investigador português deu início à primeira escola prática de Botânica.",
     subtext: "Some cool photo, some cool place. Place 1985",
   },
 ];
