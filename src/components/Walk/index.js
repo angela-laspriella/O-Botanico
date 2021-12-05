@@ -6,11 +6,12 @@ import {
   HeroContent,
   HeroH1,
   TitleWrap,
-  HeroH3,
+  InfoWrap,
+  Text,
+  InfoImg,
 } from "./HeroElements";
 
-import { Parallax } from "react-scroll-parallax";
-import ImageHero from "../../images/Hero_image.png";
+import { WalkInfo } from "../../data/data.js";
 
 const WalkSection = () => {
   const [hover, setHover] = useState(false);
@@ -30,10 +31,21 @@ const WalkSection = () => {
     >
       <HeroContainer id="walk">
         <HeroContent>
-          <TitleWrap>
-            <HeroH1>Recanto</HeroH1>
-            <HeroH1>Tropical</HeroH1>
-          </TitleWrap>
+          {WalkInfo.map((item, index) => {
+            return (
+              <>
+                <TitleWrap>
+                  <HeroH1>{item.title}</HeroH1>
+                </TitleWrap>
+                <InfoWrap>
+                  <Text>{item.text1}</Text>
+                  <InfoImg>
+                    <img src={item.img} />
+                  </InfoImg>
+                </InfoWrap>
+              </>
+            );
+          })}
         </HeroContent>
       </HeroContainer>
     </Link>

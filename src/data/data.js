@@ -1,6 +1,9 @@
 import timeline1 from "../images/scrollH/timeline_one.png";
 import timeline2 from "../images/scrollH/timeline_two.png";
 
+import walkImg1 from "../images/walk/walk1.png";
+import walkImg2 from "../images/walk/walk2.png";
+
 export const NavLinks = [
   {
     name: "Home",
@@ -42,5 +45,20 @@ export const TimelineInfo = [
     text1:
       "Os jardins botânicos surgem na Europa como consequência da expansão europeia do século XV. O contacto com plantas e animais exóticos despertou o interesse pelo seu estudo. Exemplo disso foi o português Garcia da Orta que no séc.XVI viajou para a Índia e se dedicou ao estudo das propriedades terapêuticas das plantas, publicando dois importantes ensaios.",
     subtext: "Some cool photo, some cool place. Place 1985",
+  },
+];
+
+export const WalkInfo = [
+  {
+    title: "Recanto Tropical",
+    text1:
+      "A excelente exposição solar permitiu recriar neste espaço um ambiente tropical, com palmeiras de diferentes espécies oriundas de todos os continentes, incluindo a única espécie portuguesa, espontânea no Algarve, Chamaerops humilis ssp. humilis, assim como muitas estrelícias arbóreas (Strelitzia nicolai).",
+    img: walkImg1,
+  },
+  {
+    title: "Quadrado Central e Fonte",
+    text1:
+      "A excelente exposição solar permitiu recriar neste espaço um ambiente tropical, com palmeiras de diferentes espécies oriundas de todos os continentes, incluindo a única espécie portuguesa, espontânea no Algarve, Chamaerops humilis ssp. humilis, assim como muitas estrelícias arbóreas (Strelitzia nicolai).",
+    img: walkImg2,
   },
 ];

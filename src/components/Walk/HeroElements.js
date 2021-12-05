@@ -9,7 +9,6 @@ export const HeroContainer = styled.div`
 
   overflow: hidden;
   width: 100vw;
-  height: 100vh;
 `;
 
 export const HeroContent = styled.div`
@@ -24,10 +23,16 @@ export const HeroContent = styled.div`
 `;
 
 export const TitleWrap = styled.div`
-  width: 100%;
+  width: 60%;
   max-width: 1200px;
 
+  margin-top: 300px;
+
   text-align: center;
+
+  &:first-child {
+    margin-top: 0;
+  }
 `;
 
 export const HeroH1 = styled.h1`
@@ -39,4 +44,32 @@ export const HeroH1 = styled.h1`
   @media screen and (max-width: 850px) {
     font-size: 700%;
   }
+`;
+
+export const InfoWrap = styled.div`
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  margin-top: 300px;
+`;
+
+export const Text = styled.p`
+  width: 50%;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
+
+  color: #fefae0;
+
+  padding-right: 200px;
+`;
+
+export const InfoImg = styled.div`
+  width: 50%;
 `;
