@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { ReactComponent as ArrowDown } from "../../images/Arrow_one.svg";
 
 export const HeroContainer = styled.div`
   display: flex;
@@ -9,6 +8,8 @@ export const HeroContainer = styled.div`
 
   overflow: hidden;
   width: 100vw;
+
+  padding-bottom: 100px;
 `;
 
 export const HeroContent = styled.div`
@@ -30,6 +31,10 @@ export const TitleWrap = styled.div`
 
   text-align: center;
 
+  @media screen and (max-width: 1000px) {
+    margin-top: 150px;
+  }
+
   &:first-child {
     margin-top: 0;
   }
@@ -41,8 +46,10 @@ export const HeroH1 = styled.h1`
   font-weight: 800;
   font-size: 1000%;
 
-  @media screen and (max-width: 850px) {
-    font-size: 700%;
+  text-align: left;
+
+  @media screen and (max-width: 1000px) {
+    font-size: 500%;
   }
 `;
 
@@ -54,10 +61,33 @@ export const InfoWrap = styled.div`
   flex-wrap: wrap;
 
   margin-top: 300px;
+
+  @media screen and (max-width: 1000px) {
+    flex-direction: column;
+
+    margin-top: 150px;
+  }
+`;
+
+export const TextWrap = styled.p`
+  width: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  @media screen and (max-width: 1000px) {
+    margin-top: 42px;
+    width: 100%;
+  }
 `;
 
 export const Text = styled.p`
-  width: 50%;
+  width: 70%;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
 
   font-family: Lato;
   font-style: normal;
@@ -66,10 +96,32 @@ export const Text = styled.p`
   line-height: 25px;
 
   color: #fefae0;
+`;
 
-  padding-right: 200px;
+export const ImgWrap = styled.p`
+  width: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+  }
 `;
 
 export const InfoImg = styled.div`
-  width: 50%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  img {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 1000px) {
+    width: 80%;
+  }
 `;

@@ -76,6 +76,12 @@ export const WalkInfo = [
       "A excelente exposição solar permitiu recriar neste espaço um ambiente tropical, com palmeiras de diferentes espécies oriundas de todos os continentes, incluindo a única espécie portuguesa, espontânea no Algarve, Chamaerops humilis ssp. humilis, assim como muitas estrelícias arbóreas (Strelitzia nicolai).",
     img: walkImg2,
   },
+  {
+    title: "Alameda das Tílias",
+    text1:
+      "É um dos lugares emblemáticos do Jardim, que nos traz à memória os antigos passeios públicos das cidades europeias. Aqui, o cenário aprazível muda sazonalmente e em maio e junho acresce à beleza deste espaço o agradável perfume das flores.",
+    img: walkImg1,
+  },
 ];
 
 export const EventoInfo = [

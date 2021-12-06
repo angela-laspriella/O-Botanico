@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-scroll";
 
 import {
   HeroContainer,
@@ -7,11 +6,14 @@ import {
   HeroH1,
   TitleWrap,
   InfoWrap,
+  TextWrap,
   Text,
+  ImgWrap,
   InfoImg,
 } from "./HeroElements";
 
 import { WalkInfo } from "../../data/data.js";
+import { Parallax } from "react-scroll-parallax";
 
 const WalkSection = () => {
   const [hover, setHover] = useState(false);
@@ -21,34 +23,34 @@ const WalkSection = () => {
   };
 
   return (
-    <Link
-      activeClass="active"
-      to="walk"
-      spy={true}
-      smooth={true}
-      offset={-100}
-      duration={500}
-    >
-      <HeroContainer id="walk">
-        <HeroContent>
-          {WalkInfo.map((item, index) => {
-            return (
-              <>
-                <TitleWrap>
+    <HeroContainer id="walk">
+      <HeroContent>
+        {WalkInfo.map((item, index) => {
+          return (
+            <>
+              <TitleWrap>
+                <Parallax x={[-50, 50]} tagOuter="figure">
                   <HeroH1>{item.title}</HeroH1>
-                </TitleWrap>
-                <InfoWrap>
+                </Parallax>
+              </TitleWrap>
+              <InfoWrap>
+                <ImgWrap>
                   <InfoImg>
+                    {/* <Parallax x={[-20, 10]} tagOuter="figure"> */}
                     <img src={item.img} />
+                    {/* </Parallax> */}
                   </InfoImg>
+                </ImgWrap>
+                <TextWrap>
+                  {" "}
                   <Text>{item.text1}</Text>
-                </InfoWrap>
-              </>
-            );
-          })}
-        </HeroContent>
-      </HeroContainer>
-    </Link>
+                </TextWrap>
+              </InfoWrap>
+            </>
+          );
+        })}
+      </HeroContent>
+    </HeroContainer>
   );
 };
 
