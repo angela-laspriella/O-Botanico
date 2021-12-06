@@ -12,7 +12,7 @@ export const NavLinks = [
   },
   {
     name: "Eventos",
-    path: "/contactos",
+    path: "/eventos",
   },
   {
     name: "Contactos",
@@ -42,5 +42,38 @@ export const TimelineInfo = [
     text1:
       "Os jardins botânicos surgem na Europa como consequência da expansão europeia do século XV. O contacto com plantas e animais exóticos despertou o interesse pelo seu estudo. Exemplo disso foi o português Garcia da Orta que no séc.XVI viajou para a Índia e se dedicou ao estudo das propriedades terapêuticas das plantas, publicando dois importantes ensaios.",
     subtext: "Some cool photo, some cool place. Place 1985",
+  },
+];
+
+export const EventoInfo = [
+  {
+    img: timeline1,
+    title: "Passeios do Botânico",
+    date: "15.nov.2021",
+    mes: "Nov",
+  },
+  {
+    img: timeline2,
+    title: "Plantação de Clipes",
+    date: "21.nov.2021",
+    mes: "",
+  },
+  {
+    img: timeline1,
+    title: "Passeios do Botânico",
+    date: "15.nov.2021",
+    mes: "Dez",
+  },
+  {
+    img: timeline2,
+    title: "Plantação de Clipes",
+    date: "21.nov.2021",
+    mes: "",
+  },
+  {
+    img: timeline2,
+    title: "Plantação de Pinheiros",
+    date: "30.nov.2021",
+    mes: "",
   },
 ];
