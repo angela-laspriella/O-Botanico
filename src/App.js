@@ -8,6 +8,7 @@ import Navbar from "../src/components/Navbar";
 
 import Home from "./pages";
 import Contacts from "./pages/contacts";
+import Eventos from "./pages/eventos";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,6 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contactos" element={<Contacts />} />
+        <Route path="/eventos" element={<Eventos />} />
       </Routes>
     </Router>
   );

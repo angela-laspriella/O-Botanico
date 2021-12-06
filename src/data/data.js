@@ -17,7 +17,7 @@ export const NavLinks = [
   },
   {
     name: "Eventos",
-    path: "/contactos",
+    path: "/eventos",
   },
   {
     name: "Contactos",
@@ -75,5 +75,38 @@ export const WalkInfo = [
     text1:
       "A excelente exposição solar permitiu recriar neste espaço um ambiente tropical, com palmeiras de diferentes espécies oriundas de todos os continentes, incluindo a única espécie portuguesa, espontânea no Algarve, Chamaerops humilis ssp. humilis, assim como muitas estrelícias arbóreas (Strelitzia nicolai).",
     img: walkImg2,
+  },
+];
+
+export const EventoInfo = [
+  {
+    img: timeline1,
+    title: "Passeios do Botânico",
+    date: "15.nov.2021",
+    mes: "Nov",
+  },
+  {
+    img: timeline2,
+    title: "Plantação de Clipes",
+    date: "21.nov.2021",
+    mes: "",
+  },
+  {
+    img: timeline1,
+    title: "Passeios do Botânico",
+    date: "15.nov.2021",
+    mes: "Dez",
+  },
+  {
+    img: timeline2,
+    title: "Plantação de Clipes",
+    date: "21.nov.2021",
+    mes: "",
+  },
+  {
+    img: timeline2,
+    title: "Plantação de Pinheiros",
+    date: "30.nov.2021",
+    mes: "",
   },
 ];

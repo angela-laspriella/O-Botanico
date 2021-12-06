@@ -4,7 +4,7 @@ import { Link as LinkS } from "react-scroll";
 export const Nav = styled.nav`
   margin-top: 0;
 
-  position: relative;
+  position: absolute;
   top: 0;
   padding: 0 30px;
 
@@ -15,8 +15,7 @@ export const Nav = styled.nav`
   justify-content: center;
   align-items: center;
 
-  background: ${({ scrollNav }) =>
-    scrollNav ? "rgba(0, 0, 0, 0.7)" : "transparent"};
+  background: ${({ darkbg }) => (darkbg ? "#fefae0" : "transparent")};
   font-size: 1rem;
   z-index: 10;
 
@@ -50,7 +49,7 @@ export const MenuTrigger = styled.p`
 
   color: #6e6e6e;
   &:hover {
-    color: #d7e2a1;
+    color: ${({ orangetext }) => (orangetext ? "#d7e2a1" : "#F46036")};
     transition: 0.2s ease-in-out;
   }
 `;
@@ -68,7 +67,7 @@ export const Logo = styled.p`
   cursor: pointer;
 
   &:hover {
-    color: #d7e2a1;
+    color: ${({ orangetext }) => (orangetext ? "#d7e2a1" : "#F46036")};
     transition: 0.2s ease-in-out;
   }
 `;
