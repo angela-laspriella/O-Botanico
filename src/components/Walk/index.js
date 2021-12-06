@@ -36,9 +36,9 @@ const WalkSection = () => {
               <InfoWrap>
                 <ImgWrap>
                   <InfoImg>
-                    {/* <Parallax x={[-20, 10]} tagOuter="figure"> */}
-                    <img src={item.img} />
-                    {/* </Parallax> */}
+                    <Parallax x={[-10, 0]} tagOuter="figure">
+                      <img src={item.img} />
+                    </Parallax>
                   </InfoImg>
                 </ImgWrap>
                 <TextWrap>
