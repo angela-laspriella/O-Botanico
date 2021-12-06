@@ -46,10 +46,8 @@ export const HeroH1 = styled.h1`
   font-weight: 800;
   font-size: 1000%;
 
-  text-align: left;
-
   @media screen and (max-width: 1000px) {
-    font-size: 500%;
+    font-size: 480%;
   }
 `;
 

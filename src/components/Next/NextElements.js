@@ -11,13 +11,7 @@ export const StartContainer = styled.div`
 
   width: 100vw;
   height: 100vh;
-`;
 
-export const PinkContainer = styled.div`
-  overflow: hidden;
-
-  width: 100vw;
-  height: 100vh;
   background-color: #fefae0;
 `;
 
@@ -30,6 +24,15 @@ export const TitleWrap = styled.div`
   justify-content: center;
   align-items: center;
   align-content: center;
+
+  cursor: pointer;
+
+  &:hover {
+    svg {
+      margin-left: 20px;
+      transition: 0.2s all ease;
+    }
+  }
 `;
 
 export const StartH1 = styled.h1`
@@ -47,6 +50,6 @@ export const ArrowDown = styled(ArrowDownR)`
   width: 4%;
   height: auto;
 
-  margin-left: 16px;
+  margin-left: 8px;
   transform: rotate(-0.25turn);
 `;
