@@ -25,20 +25,16 @@ const WalkSection = () => {
   return (
     <HeroContainer id="walk">
       <HeroContent>
-        {WalkInfo.map((item, index) => {
+        {WalkInfo.map((item) => {
           return (
             <>
               <TitleWrap>
-                {/* <Parallax x={[-50, 50]} tagOuter="figure"> */}
                 <HeroH1>{item.title}</HeroH1>
-                {/* </Parallax> */}
               </TitleWrap>
               <InfoWrap>
                 <ImgWrap>
                   <InfoImg>
-                    {/* <Parallax x={[-10, 0]} tagOuter="figure"> */}
                     <img src={item.img} />
-                    {/* </Parallax> */}
                   </InfoImg>
                 </ImgWrap>
                 <TextWrap>
