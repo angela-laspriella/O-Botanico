@@ -43,7 +43,7 @@ export const NavbarContainer = styled.div`
 
   margin-bottom: auto;
 `;
-export const Logo = styled.p`
+export const Logo = styled.a`
   justify-self: center;
   font-style: normal;
   font-weight: 600;
@@ -54,6 +54,9 @@ export const Logo = styled.p`
 
   color: #6e6e6e;
   cursor: pointer;
+
+  text-decoration: none;
+  text-decoration-line: none;
 
   &:hover {
     color: #f46036;

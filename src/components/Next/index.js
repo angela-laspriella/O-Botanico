@@ -4,14 +4,12 @@ import { StartContainer, StartH1, TitleWrap, ArrowDown } from "./NextElements";
 
 const NextSection = () => {
   return (
-    <>
-      <StartContainer id="next">
-        <TitleWrap>
-          <StartH1>Ver próximos eventos</StartH1>
-          <ArrowDown />
-        </TitleWrap>
-      </StartContainer>
-    </>
+    <StartContainer id="next">
+      <TitleWrap>
+        <StartH1 href="/eventos">Ver próximos eventos</StartH1>
+        <ArrowDown />
+      </TitleWrap>
+    </StartContainer>
   );
 };
 

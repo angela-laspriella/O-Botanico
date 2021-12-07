@@ -61,7 +61,7 @@ export const MenuTrigger = styled.p`
   }
 `;
 
-export const Logo = styled.p`
+export const Logo = styled.a`
   justify-self: center;
   font-style: normal;
   font-weight: 600;
@@ -70,6 +70,9 @@ export const Logo = styled.p`
 
   color: #6e6e6e;
   cursor: pointer;
+
+  text-decoration: none;
+  text-decoration-line: none;
 
   @media screen and (max-width: 900px) {
     font-weight: 600;

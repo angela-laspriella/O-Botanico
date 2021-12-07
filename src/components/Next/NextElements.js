@@ -35,7 +35,7 @@ export const TitleWrap = styled.div`
   }
 `;
 
-export const StartH1 = styled.h1`
+export const StartH1 = styled.a`
   position: relative;
   color: #f46036;
 
@@ -44,6 +44,15 @@ export const StartH1 = styled.h1`
   font-weight: normal;
   font-size: 36px;
   line-height: 123.3%;
+
+  text-decoration: none;
+  text-decoration-line: none;
+
+  &:visited {
+    text-decoration: none;
+    text-decoration-line: none;
+    color: #f46036;
+  }
 `;
 
 export const ArrowDown = styled(ArrowDownR)`

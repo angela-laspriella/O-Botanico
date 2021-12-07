@@ -31,7 +31,7 @@ const Navbar = ({ toggle }) => {
     <>
       <Nav scrollNav={scrollNav}>
         <NavbarContainer>
-          <Logo to="/" onClick={toggleHome}>
+          <Logo href="/" onClick={toggleHome}>
             O Botânico
           </Logo>
           {/* this will trigger */}
