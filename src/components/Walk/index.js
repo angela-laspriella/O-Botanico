@@ -29,16 +29,12 @@ const WalkSection = () => {
           return (
             <>
               <TitleWrap>
-                <Parallax x={[-50, 50]} tagOuter="figure">
-                  <HeroH1>{item.title}</HeroH1>
-                </Parallax>
+                <HeroH1>{item.title}</HeroH1>
               </TitleWrap>
               <InfoWrap>
                 <ImgWrap>
                   <InfoImg>
-                    <Parallax x={[-10, 0]} tagOuter="figure">
-                      <img src={item.img} />
-                    </Parallax>
+                    <img src={item.img} />
                   </InfoImg>
                 </ImgWrap>
                 <TextWrap>
