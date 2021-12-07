@@ -25,7 +25,7 @@ const WalkSection = () => {
   return (
     <HeroContainer id="walk">
       <HeroContent>
-        {WalkInfo.map((item, index) => {
+        {WalkInfo.map((item) => {
           return (
             <>
               <TitleWrap>
