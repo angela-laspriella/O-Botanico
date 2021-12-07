@@ -6,6 +6,12 @@ import timeline4 from "../images/scrollH/timeline_four.png";
 import walkImg1 from "../images/walk/walk1.png";
 import walkImg2 from "../images/walk/walk2.png";
 
+import eventos1 from "../images/arbusto.png";
+import eventos2 from "../images/fria.png";
+import eventos3 from "../images/bamboo.png";
+import eventos4 from "../images/passeio.png";
+import eventos5 from "../images/pinheiro.png";
+
 export const NavLinks = [
   {
     name: "Home",
@@ -86,33 +92,33 @@ export const WalkInfo = [
 
 export const EventoInfo = [
   {
-    img: timeline1,
+    img: eventos4,
     title: "Passeios do Botânico",
     date: "15.nov.2021",
     mes: "Nov",
   },
   {
-    img: timeline2,
-    title: "Plantação de Clipes",
+    img: eventos2,
+    title: "Visita à Estufa Fria",
     date: "21.nov.2021",
     mes: "",
   },
   {
-    img: timeline1,
-    title: "Passeios do Botânico",
-    date: "15.nov.2021",
+    img: eventos1,
+    title: "Dormir em Arbustos",
+    date: "15.dez.2021",
     mes: "Dez",
   },
   {
-    img: timeline2,
-    title: "Plantação de Clipes",
-    date: "21.nov.2021",
+    img: eventos5,
+    title: "Plantação de Pinheiros",
+    date: "21.dez.2021",
     mes: "",
   },
   {
-    img: timeline2,
-    title: "Plantação de Pinheiros",
-    date: "30.nov.2021",
+    img: eventos3,
+    title: "Percurso dos Bambus",
+    date: "30.dez.2021",
     mes: "",
   },
 ];
