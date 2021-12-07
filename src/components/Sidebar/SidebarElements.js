@@ -43,7 +43,7 @@ export const NavbarContainer = styled.div`
 
   margin-bottom: auto;
 `;
-export const Logo = styled.p`
+export const Logo = styled.a`
   justify-self: center;
   font-style: normal;
   font-weight: 600;
@@ -54,6 +54,9 @@ export const Logo = styled.p`
 
   color: #6e6e6e;
   cursor: pointer;
+
+  text-decoration: none;
+  text-decoration-line: none;
 
   &:hover {
     color: #f46036;
@@ -85,6 +88,7 @@ export const SidebarWrapper = styled.div`
   justify-content: flex-start;
 
   margin: auto;
+  padding-left: 42px;
 `;
 
 export const SidebarMenu = styled.li`
@@ -98,6 +102,14 @@ export const SidebarMenu = styled.li`
   margin-bottom: 40px;
 
   color: red;
+
+  @media screen and (max-width: 900px) {
+    height: 350px;
+  }
+
+  @media screen and (max-width: 450px) {
+    height: 250px;
+  }
 `;
 
 export const SidebarLink = styled.a`
@@ -112,6 +124,14 @@ export const SidebarLink = styled.a`
   transition: 0.2s ease-in-out;
 
   counter-increment: li;
+
+  @media screen and (max-width: 900px) {
+    font-size: 400%;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 250%;
+  }
 
   a {
     text-decoration: none;
@@ -134,6 +154,10 @@ export const SidebarLink = styled.a`
 
     font-style: normal;
     font-size: 36px;
+
+    @media screen and (max-width: 900px) {
+      font-size: 20px;
+    }
   }
 
   a:hover {
@@ -150,6 +174,10 @@ export const SidebarLink = styled.a`
       text-decoration-color: #f46036;
 
       font-size: 80px;
+
+      @media screen and (max-width: 900px) {
+        font-size: 50px;
+      }
     }
   }
 `;

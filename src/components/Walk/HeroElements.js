@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { ReactComponent as ArrowDown } from "../../images/Arrow_one.svg";
 
 export const HeroContainer = styled.div`
   display: flex;
@@ -9,7 +8,8 @@ export const HeroContainer = styled.div`
 
   overflow: hidden;
   width: 100vw;
-  height: 100vh;
+
+  padding-bottom: 100px;
 `;
 
 export const HeroContent = styled.div`
@@ -24,10 +24,20 @@ export const HeroContent = styled.div`
 `;
 
 export const TitleWrap = styled.div`
-  width: 100%;
+  width: 60%;
   max-width: 1200px;
 
+  margin-top: 300px;
+
   text-align: center;
+
+  @media screen and (max-width: 1000px) {
+    margin-top: 150px;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
 `;
 
 export const HeroH1 = styled.h1`
@@ -36,7 +46,80 @@ export const HeroH1 = styled.h1`
   font-weight: 800;
   font-size: 1000%;
 
-  @media screen and (max-width: 850px) {
-    font-size: 700%;
+  @media screen and (max-width: 1000px) {
+    font-size: 480%;
+  }
+`;
+
+export const InfoWrap = styled.div`
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  margin-top: 300px;
+
+  @media screen and (max-width: 1000px) {
+    flex-direction: column;
+
+    margin-top: 150px;
+  }
+`;
+
+export const TextWrap = styled.p`
+  width: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  @media screen and (max-width: 1000px) {
+    margin-top: 42px;
+    width: 100%;
+  }
+`;
+
+export const Text = styled.p`
+  width: 70%;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
+
+  color: #fefae0;
+`;
+
+export const ImgWrap = styled.p`
+  width: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+  }
+`;
+
+export const InfoImg = styled.div`
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  img {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 1000px) {
+    width: 80%;
   }
 `;

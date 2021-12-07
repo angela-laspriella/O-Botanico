@@ -27,6 +27,8 @@ export const TitleWrap = styled.div`
   width: 100%;
   max-width: 1200px;
   margin-top: -5%;
+
+  padding-left: 36px;
 `;
 
 export const HeroH1 = styled.h1`
@@ -40,12 +42,12 @@ export const HeroH1 = styled.h1`
     margin-left: 142px;
   }
 
-  @media screen and (max-width: 850px) {
-    font-size: 700%;
+  @media screen and (max-width: 900px) {
+    font-size: 600%;
+  }
 
-    &:last-child {
-      text-align: left;
-    }
+  @media screen and (max-width: 600px) {
+    font-size: 450%;
   }
 `;
 
@@ -62,6 +64,10 @@ export const ScrollWrap = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+
+  @media screen and (max-width: 900px) {
+    margin-top: 100px;
+  }
 `;
 
 export const ScrollImage = styled.div`

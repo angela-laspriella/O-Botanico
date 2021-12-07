@@ -34,11 +34,11 @@ const TimelineSection = () => {
     <TimelineContainer id="timeline">
       <TimelineContent>
         <Controller>
-          <Scene triggerHook="onLeave" duration={5000} pin>
+          <Scene triggerHook="onLeave" duration={6000} pin>
             {(progress) => (
               <ScrollHorizontal>
                 <Timeline totalProgress={progress} paused>
-                  <Tween from={{ x: "0%" }} to={{ x: "-50%" }}>
+                  <Tween from={{ x: "0%" }} to={{ x: "-70%" }}>
                     <Horizontal>
                       <UCWrap>
                         <UCContent>
@@ -70,7 +70,7 @@ const TimelineSection = () => {
                             );
                           })}
                         </InfoWrap>
-                        <Line />
+                        {/* <Line /> */}
                       </TimelineWrap>
                     </Horizontal>
                   </Tween>

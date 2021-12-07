@@ -18,7 +18,7 @@ const Sidebar = ({ isOpen, toggle }) => {
   return (
     <SidebarContainer isOpen={isOpen}>
       <NavbarContainer>
-        <Logo>O Botânico</Logo>
+        <Logo href="/">O Botânico</Logo>
         <Icon onClick={toggle}>
           <CloseIcon />
         </Icon>

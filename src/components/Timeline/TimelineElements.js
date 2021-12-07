@@ -24,8 +24,6 @@ export const TimelineContent = styled.div`
 `;
 
 export const UCWrap = styled.div`
-  //max-width: 800px;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -50,6 +48,11 @@ export const UCTitle = styled.h3`
   line-height: 123.3%;
 
   color: #f46036;
+
+  @media screen and (max-width: 600px) {
+    font-size: 32px;
+    line-height: 123.3%;
+  }
 `;
 
 export const UCText = styled.p`
@@ -64,6 +67,14 @@ export const UCText = styled.p`
   color: #fefae0;
 
   margin-top: 82px;
+
+  @media screen and (max-width: 600px) {
+    width: 400px;
+    margin-top: 60px;
+
+    font-size: 16px;
+    line-height: 130%;
+  }
 
   &:last-child {
     margin-top: 16px;
@@ -87,6 +98,10 @@ export const ScrollHorizontal = styled.div`
   width: 100vw;
 
   padding-left: 92px;
+
+  @media screen and (max-width: 600px) {
+    padding-left: 48px;
+  }
 `;
 
 export const TimelineWrap = styled.div`

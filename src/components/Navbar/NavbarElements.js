@@ -27,7 +27,7 @@ export const Nav = styled.nav`
 export const NavbarContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
 
   height: 80px;
   z-index: 1;
@@ -48,23 +48,37 @@ export const MenuTrigger = styled.p`
   line-height: 32px;
 
   color: #6e6e6e;
+
+  @media screen and (max-width: 900px) {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
   &:hover {
     color: ${({ orangetext }) => (orangetext ? "#d7e2a1" : "#F46036")};
     transition: 0.2s ease-in-out;
   }
 `;
 
-export const Logo = styled.p`
+export const Logo = styled.a`
   justify-self: center;
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
 
-  margin: auto;
-
   color: #6e6e6e;
   cursor: pointer;
+
+  text-decoration: none;
+  text-decoration-line: none;
+
+  @media screen and (max-width: 900px) {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+  }
 
   &:hover {
     color: ${({ orangetext }) => (orangetext ? "#d7e2a1" : "#F46036")};
