@@ -19,7 +19,7 @@ export const NavLinks = [
   },
   {
     name: "Artigos",
-    path: "/contactos",
+    path: "/artigos",
   },
   {
     name: "Eventos",
