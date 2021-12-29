@@ -86,6 +86,7 @@ export {
   sendPasswordResetEmail,
   logout,
 }; */
+
 import firebase from "firebase";
 
 const firebaseConfig = {

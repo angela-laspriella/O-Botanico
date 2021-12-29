@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -10,7 +9,7 @@ import {
 import "./login.css";
 import { auth } from "./firebase-config";
 
-const Login = () => {
+const Register = () => {
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
   const [loginEmail, setLoginEmail] = useState("");
@@ -20,25 +19,21 @@ const Login = () => {
 
   const [user, setUser] = useState({});
 
-  const navigate = useNavigate();
-
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
-    if (currentUser) navigate("/dashboard");
   });
 
-  const login = async () => {
+  const register = async () => {
     try {
-      const user = await signInWithEmailAndPassword(
+      const user = await createUserWithEmailAndPassword(
         auth,
-        loginEmail,
-        loginPassword
+        registerEmail,
+        registerPassword
       );
       console.log(user);
     } catch (error) {
       console.log(error.message);
-      // alert(error.message);
-      setErrorMessage("Example error message!");
+      alert(error.message);
     }
   };
 
@@ -49,24 +44,22 @@ const Login = () => {
   return (
     <div className="App">
       <div>
-        <h3> Login </h3>
-        {errorMessage && <p className="error"> {errorMessage} </p>}
-
+        <h3> Register User </h3>
         <input
           placeholder="Email..."
           onChange={(event) => {
-            setLoginEmail(event.target.value);
+            setRegisterEmail(event.target.value);
           }}
         />
         <input
           type="password"
           placeholder="Password..."
           onChange={(event) => {
-            setLoginPassword(event.target.value);
+            setRegisterPassword(event.target.value);
           }}
         />
 
-        <button onClick={login}> Login</button>
+        <button onClick={register}> Create User</button>
       </div>
 
       <h4> User Logged In: </h4>
@@ -77,4 +70,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;

@@ -12,6 +12,8 @@ import Eventos from "./pages/eventos";
 import Articles from "./pages/artigos";
 import Noticia from "./pages/artigoPage";
 import Login from "./pages/loginPage";
+import Register from "./pages/registerPage";
+import DashboardPage from "./pages/dashboardPage";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,6 +32,8 @@ function App() {
         <Route path="/artigos" element={<Articles />} />
         <Route path="/artigoPage" element={<Noticia />} />
         <Route path="/loginPage" element={<Login />} />
+        <Route path="/registerPage" element={<Register />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
       </Routes>
     </Router>
   );
