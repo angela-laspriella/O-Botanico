@@ -27,9 +27,15 @@ const Dashboard = () => {
     navigate("/loginPage");
   };
 
+  onAuthStateChanged(auth, (currentUser) => {
+    if (currentUser == null) navigate("/loginPage");
+    setUser(currentUser);
+  });
+
   return (
     <div className="App">
-      <h4> dashboard: </h4>
+      <h4> User Logged In: </h4>
+      {user?.email}
 
       <button onClick={logout}> Sign Out </button>
     </div>
