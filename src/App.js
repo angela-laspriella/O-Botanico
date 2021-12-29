@@ -11,6 +11,7 @@ import Contacts from "./pages/contacts";
 import Eventos from "./pages/eventos";
 import Articles from "./pages/artigos";
 import Noticia from "./pages/artigoPage";
+import Login from "./pages/loginPage";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,6 +29,7 @@ function App() {
         <Route path="/eventos" element={<Eventos />} />
         <Route path="/artigos" element={<Articles />} />
         <Route path="/artigoPage" element={<Noticia />} />
+        <Route path="/loginPage" element={<Login />} />
       </Routes>
     </Router>
   );
