@@ -7,17 +7,9 @@ import {
   onAuthStateChanged,
   signOut,
 } from "firebase/auth";
-import "./login.css";
-import { auth } from "./firebase-config";
+import { auth } from "../Login-Register/firebase-config";
 
 const Dashboard = () => {
-  const [registerEmail, setRegisterEmail] = useState("");
-  const [registerPassword, setRegisterPassword] = useState("");
-  const [loginEmail, setLoginEmail] = useState("");
-  const [loginPassword, setLoginPassword] = useState("");
-
-  const [errorMessage, setErrorMessage] = useState("");
-
   const [user, setUser] = useState({});
 
   const navigate = useNavigate();

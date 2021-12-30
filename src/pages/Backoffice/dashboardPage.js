@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Dashboard from "../components/Login/Dashboard";
+import Dashboard from "../../components/Dashboard/Dashboard";
 
 function DashboardPage() {
   return <Dashboard />;

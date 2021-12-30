@@ -6,8 +6,7 @@ import {
   onAuthStateChanged,
   signOut,
 } from "firebase/auth";
-import "./login.css";
-import { auth } from "./firebase-config";
+import { auth } from "../firebase-config";
 
 const Register = () => {
   const [registerEmail, setRegisterEmail] = useState("");
