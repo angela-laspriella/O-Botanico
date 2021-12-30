@@ -1,18 +1,17 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 import {
-  createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   onAuthStateChanged,
   signOut,
 } from "firebase/auth";
-import "./login.css";
 import { auth } from "../firebase-config";
 
+import "../login-register.css";
+
 const Login = () => {
-  const [registerEmail, setRegisterEmail] = useState("");
-  const [registerPassword, setRegisterPassword] = useState("");
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
 
@@ -42,13 +41,9 @@ const Login = () => {
     }
   };
 
-  const logout = async () => {
-    await signOut(auth);
-  };
-
   return (
     <div className="App">
-      <div>
+      <div className="Box">
         <h3> Login </h3>
         {errorMessage && <p className="error"> {errorMessage} </p>}
 
@@ -67,12 +62,8 @@ const Login = () => {
         />
 
         <button onClick={login}> Login</button>
+        <a href="/registerPage">Register here</a>
       </div>
-
-      <h4> User Logged In: </h4>
-      {user?.email}
-
-      <button onClick={logout}> Sign Out </button>
     </div>
   );
 };

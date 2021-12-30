@@ -1,22 +1,26 @@
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import {
   createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
   onAuthStateChanged,
   signOut,
 } from "firebase/auth";
 import { auth } from "../firebase-config";
 
+import "../login-register.css";
+
 const Register = () => {
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
-  const [loginEmail, setLoginEmail] = useState("");
-  const [loginPassword, setLoginPassword] = useState("");
-
-  const [errorMessage, setErrorMessage] = useState("");
 
   const [user, setUser] = useState({});
+  const navigate = useNavigate();
+
+  const logout = async () => {
+    await signOut(auth);
+  };
 
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
@@ -29,6 +33,8 @@ const Register = () => {
         registerEmail,
         registerPassword
       );
+      logout();
+      navigate("/loginPage");
       console.log(user);
     } catch (error) {
       console.log(error.message);
@@ -36,13 +42,9 @@ const Register = () => {
     }
   };
 
-  const logout = async () => {
-    await signOut(auth);
-  };
-
   return (
     <div className="App">
-      <div>
+      <div className="Box">
         <h3> Register User </h3>
         <input
           placeholder="Email..."
@@ -59,12 +61,8 @@ const Register = () => {
         />
 
         <button onClick={register}> Create User</button>
+        <a href="/loginPage">Login here</a>
       </div>
-
-      <h4> User Logged In: </h4>
-      {user?.email}
-
-      <button onClick={logout}> Sign Out </button>
     </div>
   );
 };
