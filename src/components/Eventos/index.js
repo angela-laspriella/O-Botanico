@@ -19,7 +19,6 @@ import {
   PageTitle,
 } from "./EventosElements";
 
-import { UCInfo } from "../../data/data.js";
 import { EventoInfo } from "../../data/data.js";
 
 const TimelineSection = () => {

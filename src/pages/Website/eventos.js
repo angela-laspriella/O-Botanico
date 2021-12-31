@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import TimelineSection from "../../components/Timeline";
+import TimelineSection from "../../components/Eventos";
 import Sidebar from "../../components/Sidebar";
 import Navbar from "../../components/Navbar";
 
