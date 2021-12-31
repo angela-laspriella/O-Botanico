@@ -3,25 +3,24 @@ import "./App.scss";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Sidebar from "../src/components/Sidebar";
-import Navbar from "../src/components/Navbar";
+import Home from "./pages/Website/";
+import Contacts from "./pages/Website/contacts";
+import Eventos from "./pages/Website/eventos";
+import Articles from "./pages/Website/artigos";
+import Noticia from "./pages/Website/artigoPage";
 
-import Home from "./pages";
-import Contacts from "./pages/contacts";
-import Eventos from "./pages/eventos";
-import Articles from "./pages/artigos";
-import Noticia from "./pages/artigoPage";
+import Login from "./pages/Backoffice/loginPage";
+import Register from "./pages/Backoffice/registerPage";
+import DashboardPage from "./pages/Backoffice/dashboardPage";
 
 function App() {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => {
-    setIsOpen(!isOpen); //false-true-true-false
-  };
-
   return (
     <Router>
-      <Sidebar isOpen={isOpen} toggle={toggle} />
-      <Navbar toggle={toggle} />
+      <Routes>
+        <Route path="/loginPage" element={<Login />} />
+        <Route path="/registerPage" element={<Register />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
+      </Routes>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contactos" element={<Contacts />} />
