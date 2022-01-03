@@ -30,6 +30,7 @@ const Dashboard = () => {
       {user?.email}
 
       <button onClick={logout}> Sign Out </button>
+      <p>{}</p>
     </div>
   );
 };
