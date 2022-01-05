@@ -37,7 +37,8 @@ function TaskManager() {
               key={task.id}
               completed={task.data.completed}
               title={task.data.title}
-              description={task.data.description}
+              date={task.data.date}
+              month={task.data.month}
             />
           ))}
         </div>

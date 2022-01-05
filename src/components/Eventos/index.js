@@ -80,9 +80,9 @@ const TimelineSection = () => {
                                   <Image>
                                     <img src={eventos3} />
                                     <Title>{task.data.title}</Title>
-                                    <Date>"22-2-2-11"</Date>
+                                    <Date>{task.data.date}</Date>
                                   </Image>
-                                  <MonthText>"ocjff"</MonthText>
+                                  <MonthText>{task.data.month}</MonthText>
                                 </ImageWrap>
                               </>
                             );
