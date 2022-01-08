@@ -26,7 +26,7 @@ function AddTask({ onClose, open }) {
     if (!file) return;
     const storageRef = ref(storage, `files/${file.name}`);
     const uploadTask = uploadBytesResumable(storageRef, file);
-    setRefe(`files/${file.name}`);
+
     uploadTask.on(
       "state_changed",
       (snapshot) => {
@@ -38,13 +38,14 @@ function AddTask({ onClose, open }) {
       (error) => console.log(error),
       () => {
         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-          console.log("File available at", downloadURL);
+          setRefe(`${downloadURL}`);
         });
       }
     );
   };
 
   const handleSubmit = async (e) => {
+    console.log("File available at:::::", refe);
     e.preventDefault();
     try {
       await addDoc(collection(db, "tasks"), {
