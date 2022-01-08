@@ -24,6 +24,8 @@
     "react-scroll-parallax": "^2.4.0",
     "react-scrollmagic": "^2.3.0",
     "router-dom": "^2.2.8",
+    "rxfire": "^6.0.3",
+    "rxjs": "^7.5.1",
     "scrollmagic": "^2.0.8",
     "styled-components": "^5.3.3",
     "web-vitals": "^1.1.2"

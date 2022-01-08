@@ -9,28 +9,59 @@ import {
 } from "firebase/auth";
 import { auth } from "../Login-Register/firebase-config";
 
+import { setDoc, doc } from "firebase/firestore";
+import { db } from "./firebase";
+import {
+  ref,
+  uploadString,
+  getDownloadURL,
+  getStorage,
+  uploadBytesResumable,
+} from "firebase/storage";
+
 const Dashboard = () => {
-  const [user, setUser] = useState({});
+  const [img, setImg] = useState(null);
+  const [progress, setProgress] = useState(0);
+  const storage = getStorage();
+  const storageRef = ref(storage, `images/sk`);
 
-  const navigate = useNavigate();
-
-  const logout = async () => {
-    await signOut(auth);
-    navigate("/loginPage");
+  const metadata = {
+    contentType: "image/jpeg",
   };
 
-  onAuthStateChanged(auth, (currentUser) => {
-    if (currentUser == null) navigate("/loginPage");
-    setUser(currentUser);
-  });
+  const formHandler = (e) => {
+    e.preventDefault();
+    const file = e.target.files[0];
+    setImg(file);
+  };
+
+  const uploadFiles = () => {
+    const uploadTask = uploadBytesResumable(storageRef, img, metadata);
+    uploadTask.on(
+      "state_changed",
+      null,
+      (error) => {
+        alert(error);
+      },
+      () => {
+        getDownloadURL(uploadTask.snapshot.ref).then((URL) => {
+          setDoc(doc(db, "posts", "1"), { postImage: URL }, { merge: true });
+        });
+      }
+    );
+  };
 
   return (
-    <div className="App">
-      <h4> User Logged In: </h4>
-      {user?.email}
-
-      <button onClick={logout}> Sign Out </button>
-      <p>{}</p>
+    <div>
+      <form type="form">
+        <div>
+          <input type="file" accept=".jpg,.png,.jpeg" onChange={formHandler} />
+          <button type="button" onClick={uploadFiles}>
+            Upload
+          </button>
+          <h4>{progress}%</h4>
+        </div>
+      </form>
     </div>
   );
 };
