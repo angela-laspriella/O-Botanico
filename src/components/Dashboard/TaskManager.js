@@ -39,6 +39,8 @@ function TaskManager() {
               title={task.data.title}
               date={task.data.date}
               month={task.data.month}
+              refe={task.data.refe}
+              namePath={task.data.namePath}
             />
           ))}
         </div>

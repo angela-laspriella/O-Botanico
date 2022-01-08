@@ -5,7 +5,11 @@ import EditTask from "./EditTask";
 import { doc, updateDoc, deleteDoc } from "firebase/firestore";
 import { db } from "./firebase";
 
-function Task({ id, title, date, month, completed }) {
+import { getStorage, ref, deleteObject } from "firebase/storage";
+
+const storage = getStorage();
+
+function Task({ id, title, date, refe, namePath, month, completed }) {
   const [checked, setChecked] = useState(completed);
   const [open, setOpen] = useState({ edit: false, view: false });
 
@@ -30,6 +34,16 @@ function Task({ id, title, date, month, completed }) {
     const taskDocRef = doc(db, "tasks", id);
     try {
       await deleteDoc(taskDocRef);
+      const desertRef = ref(storage, `${namePath}`);
+
+      // Delete the file
+      deleteObject(desertRef)
+        .then(() => {
+          // File deleted successfully
+        })
+        .catch((error) => {
+          // Uh-oh, an error occurred!
+        });
     } catch (err) {
       alert(err);
     }
@@ -78,6 +92,7 @@ function Task({ id, title, date, month, completed }) {
           title={title}
           date={date}
           month={month}
+          refe={refe}
           open={open.view}
         />
       )}
@@ -88,6 +103,7 @@ function Task({ id, title, date, month, completed }) {
           toEditTitle={title}
           toEditDate={date}
           toEditMonth={month}
+          toEditRefe={refe}
           open={open.edit}
           id={id}
         />

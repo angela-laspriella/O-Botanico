@@ -78,7 +78,7 @@ const TimelineSection = () => {
                               <>
                                 <ImageWrap>
                                   <Image>
-                                    <img src={eventos3} />
+                                    <img src={task.data.refe} />
                                     <Title>{task.data.title}</Title>
                                     <Date>{task.data.date}</Date>
                                   </Image>

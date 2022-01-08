@@ -12,6 +12,7 @@ function AddTask({ onClose, open }) {
   const [month, setMonth] = useState("");
   const [refe, setRefe] = useState("");
 
+  const [namePath, setnamePath] = useState("");
   const [progress, setProgress] = useState(0);
 
   /* function to add new task to firestore */
@@ -26,6 +27,8 @@ function AddTask({ onClose, open }) {
     if (!file) return;
     const storageRef = ref(storage, `files/${file.name}`);
     const uploadTask = uploadBytesResumable(storageRef, file);
+    const namepath = `files/${file.name}`;
+    setnamePath(namepath);
 
     uploadTask.on(
       "state_changed",
@@ -44,7 +47,7 @@ function AddTask({ onClose, open }) {
     );
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e, file) => {
     console.log("File available at:::::", refe);
     e.preventDefault();
     try {
@@ -53,6 +56,7 @@ function AddTask({ onClose, open }) {
         date: date,
         month: month,
         refe: refe,
+        namePath: namePath,
         completed: false,
         created: Timestamp.now(),
       });
