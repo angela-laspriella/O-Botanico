@@ -13,7 +13,7 @@ import Login from "./pages/Backoffice/loginPage";
 import Register from "./pages/Backoffice/registerPage";
 import DashboardPage from "./pages/Backoffice/dashboardPage";
 
-import TaskM from "../src/components/Dashboard/TaskManager.js";
+import TaskM from "../src/components/Dashboard/Eventos/TaskManager.js";
 
 function App() {
   return (

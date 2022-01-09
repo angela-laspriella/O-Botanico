@@ -1,9 +1,8 @@
-.taskManager > header{
+.taskManager > header {
   padding: 25px 20px;
   background-color: hsl(210, 12%, 15%);
   color: white;
   font-size: 28px;
-  font-family: cursive;
 }
 
 .taskManager__container {
@@ -25,15 +24,15 @@
   cursor: pointer;
 }
 
-.taskManager__container > button:hover{
+.taskManager__container > button:hover {
   background-color: hsl(210, 12%, 25%);
 }
 
-.taskManager__container > button:active{
+.taskManager__container > button:active {
   background-color: hsl(210, 12%, 15%);
 }
 
-.taskManager__tasks{
+.taskManager__tasks {
   display: flex;
   flex-direction: column;
   gap: 20px;

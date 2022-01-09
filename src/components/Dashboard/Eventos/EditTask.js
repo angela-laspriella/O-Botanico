@@ -3,10 +3,9 @@ import { useState } from "react";
 import "./editTask.css";
 import { doc, updateDoc } from "firebase/firestore";
 
-import { db } from "./firebase";
+import { db, storage } from "../firebase";
 import { collection, addDoc, Timestamp } from "firebase/firestore";
 import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
-import { storage } from "./firebase";
 
 function EditTask({
   open,
@@ -71,7 +70,7 @@ function EditTask({
   };
 
   return (
-    <Modal modalLable="Edit Task" onClose={onClose} open={open}>
+    <Modal modalLable="Editar evento" onClose={onClose} open={open}>
       <form onSubmit={formHandler}>
         <input type="file" className="input" />
         <h3>Uploaded {progress} %</h3>

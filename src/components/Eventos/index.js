@@ -21,11 +21,9 @@ import {
 
 import { EventoInfo } from "../../data/data.js";
 
-import "../Dashboard/taskManager.css";
-import Task from "../Dashboard/Task";
+import "../Dashboard/Eventos/taskManager.css";
 import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
 import { db } from "../Dashboard/firebase";
-import AddTask from "../Dashboard/AddTask";
 
 import eventos3 from "../../images/bamboo.png";
 

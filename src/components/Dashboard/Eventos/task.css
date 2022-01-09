@@ -1,4 +1,4 @@
-.task{
+.task {
   width: 100%;
   padding: 15px 20px;
   border-left: 4px solid hsl(210, 10%, 75%);
@@ -11,7 +11,7 @@
   box-sizing: border-box;
 }
 
-.task--borderColor{
+.task--borderColor {
   border-color: green;
   box-shadow: 0 6px 18px -9px hsl(210, 15%, 65%);
 }
@@ -20,6 +20,11 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+}
+
+.task__body img {
+  width: 200px;
+  height: auto;
 }
 
 .checkbox-custom {
@@ -33,15 +38,15 @@
   cursor: pointer;
 }
 .checkbox-custom + .checkbox-custom-label:before {
-  content: '';
+  content: "";
   background: inherit;
   border-radius: 5px;
   border: 2px solid hsl(210, 15%, 70%);
   display: inline-block;
   vertical-align: middle;
-  width: 12px; 
+  width: 12px;
   height: 12px;
-  padding: 2px; 
+  padding: 2px;
   margin-right: 10px;
 }
 .checkbox-custom:checked + .checkbox-custom-label:after {
@@ -53,26 +58,28 @@
   border: solid green;
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
-  top: 2px; left: 5px;
+  top: 2px;
+  left: 5px;
 }
 
-.task__body p{
+.task__body p {
   margin: 10px 0 0 0;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical; 
+  -webkit-box-orient: vertical;
 }
 
-.task__buttons{
+.task__buttons {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   margin-top: 30px;
+  gap: 16px;
   align-items: center;
 }
 
 .task__buttons > button {
-  background-color: hsl(210, 70%, 60%);
   padding: 5px 10px;
   font-size: 16px;
   border: none;
@@ -84,16 +91,24 @@
   background-color: hsl(210, 70%, 50%);
 }
 
-.task__buttons > button:active{
+.task__buttons > button:active {
   background-color: hsl(210, 70%, 60%);
 }
 
 .task__deleteNedit button {
-  margin-right: 20px;
-  background-color: transparent;
-  border: none;
+  width: 100%;
+
   font-size: 16px;
   color: hsl(210, 10%, 55%);
+}
+
+.task__editButton {
+  background-color: goldenrod;
+}
+
+.task__deleteButton {
+  background-color: red;
+  color: white;
 }
 
 .task__editButton:hover {

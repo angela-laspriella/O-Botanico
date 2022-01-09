@@ -2,7 +2,7 @@ import "./taskManager.css";
 import Task from "./Task";
 import { useState, useEffect } from "react";
 import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
-import { db } from "./firebase";
+import { db } from "../firebase";
 import AddTask from "./AddTask";
 
 function TaskManager() {
@@ -27,9 +27,11 @@ function TaskManager() {
 
   return (
     <div className="taskManager">
-      <header>Task Manager</header>
+      <header>Eventos Manager</header>
       <div className="taskManager__container">
-        <button onClick={() => setOpenAddModal(true)}>Add task +</button>
+        <button onClick={() => setOpenAddModal(true)}>
+          Adicionar evento +
+        </button>
         <div className="taskManager__tasks">
           {tasks.map((task) => (
             <Task
