@@ -3,41 +3,23 @@ import {
   ArticlesContainer,
   TituloWrap,
   ArtigosH1,
+  Grid,
   Container1,
-  ThumbnailContainer,
-  Artigo,
-  ImgArt,
-  Headline,
-  Subtitle,
-  Text,
 } from "./artigosElements";
-import { articleObjOne } from "./data";
+import Card from "../Card";
 
 const ArtigoSection = () => {
   return (
     <>
-      <ArticlesContainer>
+      <ArticlesContainer id="artigos">
         <TituloWrap>
           <ArtigosH1> Artigos </ArtigosH1>
         </TituloWrap>
-        <Container1>
-          {articleObjOne.map((item, index) => {
-            return (
-              <>
-                <ThumbnailContainer>
-                  <Artigo href="/artigoPage">
-                    <ImgArt>
-                      <img src={item.img} />
-                    </ImgArt>
-                    <Headline>{item.topTitle}</Headline>
-                    <Subtitle>{item.date}</Subtitle>
-                    <Text>{item.texto}</Text>
-                  </Artigo>
-                </ThumbnailContainer>
-              </>
-            );
-          })}
-        </Container1>
+        <Grid>
+          <Container1>
+            <Card />
+          </Container1>
+        </Grid>
       </ArticlesContainer>
     </>
   );

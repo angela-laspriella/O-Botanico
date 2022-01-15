@@ -1,15 +1,37 @@
 import styled from "styled-components";
+import { Link as LinkR } from "react-router-dom";
+
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  background: #fdfae3;
+  height: fit-content;
+  justify-content: center;
+
+  min-height: 100vh;
+`;
+
+export const ReturnIcon = styled(LinkR)`
+  display: flex;
+  width: fit-content;
+  height: 100px;
+  /* background: red; */
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 0 0 0 100px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #6e6e6e;
+`;
 
 export const NoticiaContainer = styled.div`
   display: flex;
   flex-direction: row;
-  background: #fdfae3;
+  background: transparent;
   align-items: center;
-  margin-top: -80px;
-  padding-top: 80px;
   justify-content: center;
-  padding-left: 100px;
-  padding-right: 70px;
+  padding: 20px 70px 0 100px;
 
   width: 100vw;
   height: fit-content;
@@ -31,7 +53,7 @@ export const ImgWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   width: 50%;
 
   img {
@@ -51,7 +73,7 @@ export const ImgWrapper = styled.div`
 export const TextoWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 60px;
+  padding: 0 60px 60px 20px;
   width: 50%;
 
   @media screen and (max-width: 1220px) {

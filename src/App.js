@@ -12,6 +12,7 @@ import Noticia from "./pages/Website/artigoPage";
 import Login from "./pages/Backoffice/loginPage";
 import Register from "./pages/Backoffice/registerPage";
 import DashboardPage from "./pages/Backoffice/dashboardPage";
+import { noticias } from "./data/data";
 
 import TaskM from "../src/components/Dashboard/Eventos/TaskManager.js";
 
@@ -29,7 +30,7 @@ function App() {
         <Route path="/contactos" element={<Contacts />} />
         <Route path="/eventos" element={<Eventos />} />
         <Route path="/artigos" element={<Articles />} />
-        <Route path="/artigoPage" element={<Noticia />} />
+        <Route path="/noticias/:id" element={<Noticia data={noticias} />} />
       </Routes>
     </Router>
   );

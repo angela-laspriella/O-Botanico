@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import { Link as LinkS } from "react-scroll";
-import { Link as LinkR } from "react-router-dom";
 import { MdClear } from "react-icons/md";
 
 export const SidebarContainer = styled.aside`
