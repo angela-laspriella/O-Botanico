@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import ArtigoSection from "../components/Artigos";
 
 import { ParallaxProvider } from "react-scroll-parallax";

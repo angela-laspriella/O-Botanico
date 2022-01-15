@@ -1,8 +1,4 @@
 import React, { useState } from "react";
-import Sidebar from "../components/Sidebar";
-import Navbar from "../components/Navbar";
-
-import { ParallaxProvider } from "react-scroll-parallax";
 
 function Contacts() {
   const [isOpen, setIsOpen] = useState(false);
