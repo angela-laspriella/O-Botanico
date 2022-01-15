@@ -1,12 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import {
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  onAuthStateChanged,
-  signOut,
-} from "firebase/auth";
+import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../Login-Register/firebase-config";
 
 const Dashboard = () => {
@@ -30,6 +25,7 @@ const Dashboard = () => {
       {user?.email}
 
       <button onClick={logout}> Sign Out </button>
+      <p>{}</p>
     </div>
   );
 };

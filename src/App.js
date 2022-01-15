@@ -13,6 +13,8 @@ import Login from "./pages/Backoffice/loginPage";
 import Register from "./pages/Backoffice/registerPage";
 import DashboardPage from "./pages/Backoffice/dashboardPage";
 
+import TaskM from "../src/components/Dashboard/Eventos/TaskManager.js";
+
 function App() {
   return (
     <Router>
@@ -20,6 +22,7 @@ function App() {
         <Route path="/loginPage" element={<Login />} />
         <Route path="/registerPage" element={<Register />} />
         <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="/task" element={<TaskM />} />
       </Routes>
       <Routes>
         <Route path="/" element={<Home />} />
