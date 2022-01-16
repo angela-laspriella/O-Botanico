@@ -15,6 +15,7 @@ import DashboardPage from "./pages/Backoffice/dashboardPage";
 import { noticias } from "./data/data";
 
 import TaskM from "../src/components/Dashboard/Eventos/TaskManager.js";
+import ArtigosM from "../src/components/Dashboard/Artigos/TaskManager.js";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/registerPage" element={<Register />} />
         <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="/task" element={<TaskM />} />
+        <Route path="/artigosM" element={<ArtigosM />} />
       </Routes>
       <Routes>
         <Route path="/" element={<Home />} />
