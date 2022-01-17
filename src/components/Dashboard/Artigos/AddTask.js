@@ -104,7 +104,7 @@ function AddTask({ onClose, open }) {
   };
 
   return (
-    <Modal modalLable="Add Task" onClose={onClose} open={open}>
+    <Modal modalLable="Adicionar Artigo" onClose={onClose} open={open}>
       <h4>Imagem Artigo</h4>
       <form onSubmit={formHandler}>
         <input type="file" className="input" />

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Controller, Scene } from "react-scrollmagic";
 import { Tween, Timeline } from "react-gsap";
 
-import "./algumacoisa.css";
 import {
   TimelineContainer,
   TimelineContent,
