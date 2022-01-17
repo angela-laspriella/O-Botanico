@@ -11,10 +11,7 @@ function TaskManager() {
 
   /* function to get all tasks from firestore in realtime */
   useEffect(() => {
-    const taskColRef = query(
-      collection(db, "tasks"),
-      orderBy("created", "desc")
-    );
+    const taskColRef = query(collection(db, "tasks"), orderBy("date", "desc"));
     onSnapshot(taskColRef, (snapshot) => {
       setTasks(
         snapshot.docs.map((doc) => ({

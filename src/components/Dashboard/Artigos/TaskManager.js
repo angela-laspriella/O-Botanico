@@ -40,9 +40,11 @@ function TaskManager() {
               completed={task.data.completed}
               title={task.data.title}
               date={task.data.date}
-              month={task.data.month}
+              text={task.data.text}
               refe={task.data.refe}
+              refe2={task.data.refe2}
               namePath={task.data.namePath}
+              namePath2={task.data.namePath2}
             />
           ))}
         </div>

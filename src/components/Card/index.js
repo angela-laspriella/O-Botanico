@@ -31,14 +31,13 @@ const Card = () => {
         return (
           <>
             <Artigo key={index} href={`/noticias/${task.id}`}>
-              {/*               <ImgArt>
-                <img src={item.imgS} />
+              <ImgArt>
+                <img src={task.data.refe} />
               </ImgArt>
- */}{" "}
+
               <Headline>{task.data.title}</Headline>
-              {/*               <Subtitle>{item.subtitle}</Subtitle>
-              <Text>{item.introducao}</Text>
- */}{" "}
+              <Subtitle>{task.data.date}</Subtitle>
+              <Text>{task.data.text}</Text>
             </Artigo>
           </>
         );

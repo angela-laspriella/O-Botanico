@@ -43,22 +43,22 @@ const NoticiaSection = () => {
         <ReturnIcon to="/artigos">
           <FaArrowLeft />
         </ReturnIcon>
-        {noticias
+        {/* {noticias
           .filter((item) => item.id === id)
-          .map((item, index) => {
+          .map((item, index) => { */}
+        {tasks
+          .filter((item) => item.id === id)
+          .map((task, index) => {
             return (
               <>
                 <NoticiaContainer>
                   <ImgWrapper>
-                    <img src={item.imgB} />
+                    <img src={task.data.refe2} />
                   </ImgWrapper>
                   <TextoWrapper>
-                    <Cabecalho>{item.title}</Cabecalho>
-                    <Subtitulo>{item.subtitle}</Subtitulo>
-                    <Corpo>
-                      {item.corpo}
-                      {item.corpo2}
-                    </Corpo>
+                    <Cabecalho>{task.data.title}</Cabecalho>
+                    <Subtitulo>{task.data.date}</Subtitulo>
+                    <Corpo>{task.data.text}</Corpo>
                   </TextoWrapper>
                 </NoticiaContainer>
               </>

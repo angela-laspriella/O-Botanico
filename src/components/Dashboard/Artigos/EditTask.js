@@ -12,27 +12,35 @@ function EditTask({
   onClose,
   toEditTitle,
   toEditRefe,
+  toEditRefe2,
   toEditDate,
-  toEditMonth,
+  toEdittext,
   id,
 }) {
   const [title, setTitle] = useState(toEditTitle);
   const [date, setDate] = useState(toEditDate);
-  const [month, setMonth] = useState(toEditMonth);
+  const [text, settext] = useState(toEdittext);
   const [refe, setRefe] = useState(toEditRefe);
+  const [refe2, setRefe2] = useState(toEditRefe2);
 
   const [progress, setProgress] = useState(0);
+  const [progress2, setProgress2] = useState(0);
 
   const formHandler = (e) => {
     e.preventDefault();
     const file = e.target[0].files[0];
     uploadFiles(file);
   };
+  const formHandler2 = (e) => {
+    e.preventDefault();
+    const file = e.target[0].files[0];
+    uploadFiles2(file);
+  };
 
   const uploadFiles = (file) => {
     //
     if (!file) return;
-    const storageRef = ref(storage, `files/${file.name}`);
+    const storageRef = ref(storage, `imagensArtigos/${file.name}`);
     const uploadTask = uploadBytesResumable(storageRef, file);
 
     uploadTask.on(
@@ -52,6 +60,29 @@ function EditTask({
     );
   };
 
+  const uploadFiles2 = (file) => {
+    //
+    if (!file) return;
+    const storageRef2 = ref(storage, `imagensArtigos/${file.name}`);
+    const uploadTask2 = uploadBytesResumable(storageRef2, file);
+
+    uploadTask2.on(
+      "state_changed",
+      (snapshot) => {
+        const prog = Math.round(
+          (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+        );
+        setProgress2(prog);
+      },
+      (error) => console.log(error),
+      () => {
+        getDownloadURL(uploadTask2.snapshot.ref).then((downloadURL) => {
+          setRefe2(`${downloadURL}`);
+        });
+      }
+    );
+  };
+
   /* function to update firestore */
   const handleUpdate = async (e) => {
     e.preventDefault();
@@ -60,8 +91,9 @@ function EditTask({
       await updateDoc(taskDocRef, {
         title: title,
         date: date,
-        month: month,
+        text: text,
         refe: refe,
+        refe2: refe2,
       });
       onClose();
     } catch (err) {
@@ -71,9 +103,16 @@ function EditTask({
 
   return (
     <Modal modalLable="Editar evento" onClose={onClose} open={open}>
+      <h4>Imagem Artigo</h4>
       <form onSubmit={formHandler}>
         <input type="file" className="input" />
-        <h3>Uploaded {progress} %</h3>
+        <p>Uploaded {progress} %</p>
+        <button type="submit">Upload</button>
+      </form>
+      <h4>Imagem Noticia</h4>
+      <form onSubmit={formHandler2}>
+        <input type="file" className="input" />
+        <p>Uploaded {progress2} %</p>
         <button type="submit">Upload</button>
       </form>
 
@@ -92,11 +131,10 @@ function EditTask({
 
         <input
           type="text"
-          name="Month"
-          onChange={(e) => setMonth(e.target.value)}
-          value={month}
-          placeholder="Mês"
-          maxLength={3}
+          name="text"
+          onChange={(e) => settext(e.target.value)}
+          value={text}
+          placeholder="Descrição"
         />
 
         <button type="submit">Edit</button>
