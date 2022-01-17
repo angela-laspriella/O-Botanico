@@ -18,6 +18,7 @@ function Task({
   namePath,
   namePath2,
   text,
+  text2,
   completed,
 }) {
   const [checked, setChecked] = useState(completed);
@@ -97,6 +98,7 @@ function Task({
         <h2>{title}</h2>
         <p>{date}</p>
         <p>{text}</p>
+        <p>{text2}</p>
         <div className="task__buttons">
           <button onClick={() => setOpen({ ...open, view: true })}>View</button>
 
@@ -118,6 +120,7 @@ function Task({
           title={title}
           date={date}
           text={text}
+          text2={text2}
           refe={refe}
           refe2={refe2}
           open={open.view}
@@ -130,6 +133,7 @@ function Task({
           toEditTitle={title}
           toEditDate={date}
           toEdittext={text}
+          toEdittext2={text2}
           toEditRefe={refe}
           toEditRefe2={refe2}
           open={open.edit}

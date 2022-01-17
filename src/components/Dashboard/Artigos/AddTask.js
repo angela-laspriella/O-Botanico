@@ -10,6 +10,7 @@ function AddTask({ onClose, open }) {
   const [title, setTitle] = useState("");
   const [date, setDate] = useState("");
   const [text, settext] = useState("");
+  const [text2, settext2] = useState("");
   const [refe, setRefe] = useState("");
   const [refe2, setRefe2] = useState("");
 
@@ -90,6 +91,7 @@ function AddTask({ onClose, open }) {
         title: title,
         date: date,
         text: text,
+        text2: text2,
         refe: refe,
         refe2: refe2,
         namePath: namePath,
@@ -140,6 +142,14 @@ function AddTask({ onClose, open }) {
           onChange={(e) => settext(e.target.value)}
           value={text}
           placeholder="Descrição"
+        />
+
+        <input
+          type="text"
+          name="text2"
+          onChange={(e) => settext2(e.target.value)}
+          value={text2}
+          placeholder="Texto Notícia"
         />
         <button type="submit">Done</button>
       </form>
