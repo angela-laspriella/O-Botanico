@@ -3,6 +3,23 @@
   background-color: hsl(210, 12%, 15%);
   color: white;
   font-size: 28px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.taskManager > header a {
+  margin-left: 24px;
+  color: white;
+  font-size: 20px;
+
+  text-decoration: underline;
+}
+
+.taskManager > header a:hover {
+  color: lightseagreen;
+  cursor: pointer;
 }
 
 .taskManager__container {

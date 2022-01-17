@@ -5,9 +5,26 @@ import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
 import { db } from "../firebase";
 import AddTask from "./AddTask";
 
+import { useNavigate } from "react-router-dom";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import { auth } from "../../Login-Register/firebase-config";
+
 function TaskManager() {
   const [openAddModal, setOpenAddModal] = useState(false);
   const [tasks, setTasks] = useState([]);
+  const [user, setUser] = useState({});
+
+  const navigate = useNavigate();
+
+  onAuthStateChanged(auth, (currentUser) => {
+    if (currentUser == null) navigate("/loginPage");
+    setUser(currentUser);
+  });
+
+  const logout = async () => {
+    await signOut(auth);
+    navigate("/loginPage");
+  };
 
   /* function to get all tasks from firestore in realtime */
   useEffect(() => {
@@ -27,10 +44,19 @@ function TaskManager() {
 
   return (
     <div className="taskManager">
-      <header>Eventos Manager</header>
+      <header>
+        <div>
+          <p>Artigos Manager</p>
+        </div>
+        <div>
+          <a href="/dashboard">Dashboard</a>
+          <a onClick={logout}>Log out</a>
+        </div>
+      </header>
+
       <div className="taskManager__container">
         <button onClick={() => setOpenAddModal(true)}>
-          Adicionar evento +
+          Adicionar artigos +
         </button>
         <div className="taskManager__tasks">
           {tasks.map((task) => (

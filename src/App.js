@@ -24,7 +24,7 @@ function App() {
         <Route path="/loginPage" element={<Login />} />
         <Route path="/registerPage" element={<Register />} />
         <Route path="/dashboard" element={<DashboardPage />} />
-        <Route path="/task" element={<TaskM />} />
+        <Route path="/eventosM" element={<TaskM />} />
         <Route path="/artigosM" element={<ArtigosM />} />
       </Routes>
       <Routes>
