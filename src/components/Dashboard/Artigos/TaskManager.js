@@ -41,6 +41,7 @@ function TaskManager() {
               title={task.data.title}
               date={task.data.date}
               text={task.data.text}
+              text2={task.data.text2}
               refe={task.data.refe}
               refe2={task.data.refe2}
               namePath={task.data.namePath}

@@ -43,9 +43,6 @@ const NoticiaSection = () => {
         <ReturnIcon to="/artigos">
           <FaArrowLeft />
         </ReturnIcon>
-        {/* {noticias
-          .filter((item) => item.id === id)
-          .map((item, index) => { */}
         {tasks
           .filter((item) => item.id === id)
           .map((task, index) => {
@@ -58,7 +55,7 @@ const NoticiaSection = () => {
                   <TextoWrapper>
                     <Cabecalho>{task.data.title}</Cabecalho>
                     <Subtitulo>{task.data.date}</Subtitulo>
-                    <Corpo>{task.data.text}</Corpo>
+                    <Corpo>{task.data.text2}</Corpo>
                   </TextoWrapper>
                 </NoticiaContainer>
               </>

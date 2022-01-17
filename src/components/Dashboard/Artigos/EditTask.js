@@ -15,11 +15,13 @@ function EditTask({
   toEditRefe2,
   toEditDate,
   toEdittext,
+  toEdittext2,
   id,
 }) {
   const [title, setTitle] = useState(toEditTitle);
   const [date, setDate] = useState(toEditDate);
   const [text, settext] = useState(toEdittext);
+  const [text2, settext2] = useState(toEdittext2);
   const [refe, setRefe] = useState(toEditRefe);
   const [refe2, setRefe2] = useState(toEditRefe2);
 
@@ -92,6 +94,7 @@ function EditTask({
         title: title,
         date: date,
         text: text,
+        text2: text2,
         refe: refe,
         refe2: refe2,
       });
@@ -135,6 +138,14 @@ function EditTask({
           onChange={(e) => settext(e.target.value)}
           value={text}
           placeholder="Descrição"
+        />
+
+        <input
+          type="text"
+          name="text2"
+          onChange={(e) => settext2(e.target.value)}
+          value={text2}
+          placeholder="Texto Notícia"
         />
 
         <button type="submit">Edit</button>
