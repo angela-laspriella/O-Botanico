@@ -25,9 +25,9 @@ function AddTask({ onClose, open }) {
   const uploadFiles = (file) => {
     //
     if (!file) return;
-    const storageRef = ref(storage, `files/${file.name}`);
+    const storageRef = ref(storage, `imagensEventos/${file.name}`);
     const uploadTask = uploadBytesResumable(storageRef, file);
-    const namepath = `files/${file.name}`;
+    const namepath = `imagensEventos/${file.name}`;
     setnamePath(namepath);
 
     uploadTask.on(

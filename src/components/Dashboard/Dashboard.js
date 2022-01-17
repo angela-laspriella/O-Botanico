@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../Login-Register/firebase-config";
 
+import { MainContainer, Button } from "./DasboardElements.js";
+
 const Dashboard = () => {
   const [user, setUser] = useState({});
 
@@ -20,13 +22,17 @@ const Dashboard = () => {
   });
 
   return (
-    <div className="App">
-      <h4> User Logged In: </h4>
-      {user?.email}
-
-      <button onClick={logout}> Sign Out </button>
-      <p>{}</p>
-    </div>
+    <MainContainer>
+      <div>
+        <h4> Usúario: </h4>
+        {user?.email}
+        <button onClick={logout}> Log Out </button>
+      </div>
+      <div>
+        <Button href="/eventosM"> Eventos </Button>
+        <Button href="/artigosM"> Artigos </Button>
+      </div>
+    </MainContainer>
   );
 };
 

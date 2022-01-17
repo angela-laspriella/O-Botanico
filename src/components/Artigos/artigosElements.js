@@ -10,6 +10,7 @@ export const ArticlesContainer = styled.div`
   justify-content: center;
 
   padding-bottom: 60px;
+  min-height: 100vh;
 `;
 
 export const TituloWrap = styled.div`

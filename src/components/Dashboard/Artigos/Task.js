@@ -9,7 +9,17 @@ import { getStorage, ref, deleteObject } from "firebase/storage";
 
 const storage = getStorage();
 
-function Task({ id, title, date, refe, namePath, month, completed }) {
+function Task({
+  id,
+  title,
+  date,
+  refe,
+  refe2,
+  namePath,
+  namePath2,
+  text,
+  completed,
+}) {
   const [checked, setChecked] = useState(completed);
   const [open, setOpen] = useState({ edit: false, view: false });
 
@@ -35,9 +45,21 @@ function Task({ id, title, date, refe, namePath, month, completed }) {
     try {
       await deleteDoc(taskDocRef);
       const desertRef = ref(storage, `${namePath}`);
-
+      console.log(namePath);
+      console.log(namePath2);
       // Delete the file
       deleteObject(desertRef)
+        .then(() => {
+          // File deleted successfully
+        })
+        .catch((error) => {
+          // Uh-oh, an error occurred!
+        });
+
+      const desertRef2 = ref(storage, `${namePath2}`);
+
+      // Delete the file
+      deleteObject(desertRef2)
         .then(() => {
           // File deleted successfully
         })
@@ -49,13 +71,32 @@ function Task({ id, title, date, refe, namePath, month, completed }) {
     }
   };
 
+  /* const handleDelete2 = async () => {
+    const taskDocRef = doc(db, "artigos", id);
+    try {
+      await deleteDoc(taskDocRef);
+      const desertRef2 = ref(storage, `${name.............Path2}`);
+
+      // Delete the file
+      deleteObject(desertRef2)
+        .then(() => {
+          // File deleted successfully
+        })
+        .catch((error) => {
+          // Uh-oh, an error occurred!
+        });
+    } catch (err) {
+      alert(err);
+    }
+  }; */
+
   return (
     <div className={`task ${checked && "task--borderColor"}`}>
       <div className="task__body">
         <img src={refe} />
         <h2>{title}</h2>
         <p>{date}</p>
-        <p>{month}</p>
+        <p>{text}</p>
         <div className="task__buttons">
           <button onClick={() => setOpen({ ...open, view: true })}>View</button>
 
@@ -76,8 +117,9 @@ function Task({ id, title, date, refe, namePath, month, completed }) {
           onClose={handleClose}
           title={title}
           date={date}
-          month={month}
+          text={text}
           refe={refe}
+          refe2={refe2}
           open={open.view}
         />
       )}
@@ -87,8 +129,9 @@ function Task({ id, title, date, refe, namePath, month, completed }) {
           onClose={handleClose}
           toEditTitle={title}
           toEditDate={date}
-          toEditMonth={month}
+          toEdittext={text}
           toEditRefe={refe}
+          toEditRefe2={refe2}
           open={open.edit}
           id={id}
         />

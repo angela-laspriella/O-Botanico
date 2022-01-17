@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Controller, Scene } from "react-scrollmagic";
 import { Tween, Timeline } from "react-gsap";
 
-import "./algumacoisa.css";
 import {
   TimelineContainer,
   TimelineContent,
@@ -44,10 +43,7 @@ const TimelineSection = () => {
 
   /* function to get all tasks from firestore in realtime */
   useEffect(() => {
-    const taskColRef = query(
-      collection(db, "tasks"),
-      orderBy("created", "desc")
-    );
+    const taskColRef = query(collection(db, "tasks"), orderBy("date", "asc"));
     onSnapshot(taskColRef, (snapshot) => {
       setTasks(
         snapshot.docs.map((doc) => ({
